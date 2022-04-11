@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thực hành 01</title>
+</head>
+<body>
+  <input type="text" id="index">
+  <button onclick="add();">Add</button>
+  <button onclick="display();">Display</button>
+  <div id="result"></div>
+  <script>
+    let x = 0;
+    var arrs = [];
+    function add() {
+      arrs[x] = document.getElementById('index').value;
+      alert('element: ' + arrs[x] + ' added at index ' + x);
+      x++;
+      document.getElementById('index').value = '';
+    }
+    function display() {
+      let e = '<hr>';
+      for (let i = 0; i < arrs.length; i++) {
+        e += 'Element ' + i + ' = ' + arrs[i] + '<br>';
+      }
+      document.getElementById('result').innerHTML = e;
+    }
+
+  </script>
+</body>
+</html>
