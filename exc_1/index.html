@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <p id="join"></p> -->
+  <!-- <script>
+    let myColor = ['Red','Green','White', 'Black'];
+    let text = myColor.join();
+    document.getElementById('join').innerHTML = text;
+  </script> -->
+  <!-- <script>
+    const num = window.prompt();
+    const str = num.toString();
+    const result = [str[0]];
+    for (let x=1; x<str.length; x++){
+      if((str[x-1]%2===0)&&(str[x]%2===0)){
+        result.push('-',str[x])
+        // coi là str[x-1] là str[0]
+        // kết quả là thêm '-' và thêm str[x] vô mảng
+      }else{
+        result.push(str[x])
+      }
+    }
+    console.log(result.join(''))
+
+     // sử dụng join với dấu '' sẽ không có dấu phẩy ngăn cách giữa các phần tử của mảng
+     // đã join
+  </script> -->
+
+  <script>
+    var str = 'stringOfaYears';
+    var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+     var result = [];
+      for (var x =0; x<str.length;x++){
+        if(UPPER.indexOf(str[x])!== -1){
+          result.push(str[x].toLocaleLowerCase());
+        } else if (LOWER.indexOf(str[x]) !== -1){
+          result.push(str[x].toLocaleUpperCase());
+        } else {
+          result.push(str[x])
+        }
+      }
+  </script>
+</html>
