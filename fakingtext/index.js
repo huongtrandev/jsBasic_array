@@ -24,18 +24,20 @@ array[21] = "C";
 array[22] = "!";
 
 function fake() {
-  let text = document.getElementById("txt").value;
-  let j = text.length;
+  let text = document.getElementById("txt").value; // tạo biến text get từ id "txt"
+  let j = text.length; //tạo biến j gán bằng text.length
   if (j > 0) {
+    //lặp với điều kiện j>0
     for (let i = 1; i <= j; i++) {
-      str = str + array[i];
+      str = str + array[i]; //gán biến str bằng thành phần mảng array mỗi lần lặp
       if (i === 22) {
+        //tạo một điều kiện xử lý khi đã gõ lên full ký tự thì sẽ quay về chuỗi rỗng
         document.getElementById("txt").value = "";
         str = "";
       }
     }
   }
-  document.getElementById("txt").value = str;
+  document.getElementById("txt").value = str; // cuối cùng gán kết quả của id txt bằng str
   str = "";
   setTimeout("fake()", 1);
 }
